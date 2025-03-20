@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignis Obscura - Clayden Parfums</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Clayden Parfums</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="terms.html">Términos y condiciones</a></li>
+                <li><a href="products.html">Catálogo</a></li>
+                <li><a href="limited_edition.html">Ediciones Limitadas</a></li>
+                <li><a href="cart.html">Carrito</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="product-details">
+        <div style="display: flex; align-items: flex-start;">
+            <img src="images/ignis_obscura.png" alt="Ignis Obscura" style="width: 400px; margin-right: 20px;">
+            <div>
+                <h2>Ignis Obscura</h2>
+                <p><strong>Descripción: </strong>Ignis Obscura es una fragancia intrigante que combina la energía del fuego con la profundidad de la oscuridad. Las especias iniciales dan paso a una rica combinación de flores y maderas, que culmina en una base cálida de cuero y vainilla. Esta fragancia especiada y cálida es ideal para los meses más fríos, ya que sus notas de cuero, vainilla y pachulí ofrecen una sensación de confort y calidez. La pimienta y la nuez moscada le dan una chispa que corta la frialdad del invierno.
+                </p>
+                <p><strong>Notas:</strong></p>
+                <ul>
+                    <li>Notas de salida: Pimienta negra, Nuez moscada</li>
+                    <li>Notas de corazón: Rosa de Bulgaria, Cedro, Geranio</li>
+                    <li>Notas de fondo: Vainilla, Pachulí, Cuero</li>
+                </ul>
+                <label for="size">Selecciona el tamaño:</label>
+                <select id="size">
+                    <option value="10ml" data-price="25">10ml - 25€</option>
+                    <option value="30ml" data-price="50">30ml - 50€</option>
+                    <option value="60ml" data-price="90">60ml - 90€</option>
+                </select>
+                <p><strong>Precio:</strong> <span id="price">25€ - 90€</span></p>
+                <button onclick="addToCart('Ignis Obscura', document.getElementById('size').value, document.getElementById('size').selectedOptions[0].getAttribute('data-price'))">Comprar</button>
+            </div>
+        </div>
+    </section>
+    <section id="product-reviews">
+        <h3>Comentarios y Reseñas</h3>
+        <div id="reviews-container">
+            <div class="review">
+                <div class="review-header">
+                    <p><strong>Juan Beato</strong></p>
+                    <p class="rating">⭐⭐⭐⭐⭐</p>
+                </div>
+                <p>"En nariz representa bien al fuego. Las notas especiadas resaltan mucho y contrastan muy bien con la vainilla y el cuero. Al cabo de unas horas parece un perfume totalmente diferente."</p>
+            </div>
+            <div class="review">
+                <div class="review-header">
+                    <p><strong>Erra Aslani</strong></p>
+                    <p class="rating">⭐⭐⭐⭐⭐</p>
+                </div>
+                <p>"Es perfecto para ir de cita, genera muchos cumplidos."</p>
+            </div>
+        </div>
+        
+        <h4>Deja tu comentario:</h4>
+        <form id="review-form">
+            <label for="name">Tu nombre:</label>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="rating">Calificación:</label>
+            <select id="rating" name="rating" required>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐☆</option>
+                <option value="3">⭐⭐⭐☆☆</option>
+                <option value="2">⭐⭐☆☆☆</option>
+                <option value="1">⭐☆☆☆☆</option>
+            </select><br><br>
+    
+            <label for="review-text">Tu comentario:</label><br>
+            <textarea id="review-text" name="review-text" rows="4" required></textarea><br><br>
+    
+            <button type="submit">Enviar Comentario</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Clayden Parfums. Todos los derechos reservados.</p>
+        <p>Para contactar con nosotros, envia un correo a <strong>info@clayden.com</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

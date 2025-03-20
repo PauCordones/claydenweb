@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viventis Alis - Clayden Parfums</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Clayden Parfums</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="terms.html">Términos y condiciones</a></li>
+                <li><a href="products.html">Catálogo</a></li>
+                <li><a href="limited_edition.html">Ediciones Limitadas</a></li>
+                <li><a href="cart.html">Carrito</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="product-details">
+        <div style="display: flex; align-items: flex-start;">
+            <img src="images/viventis_alis.png" alt="Viventis Alis" style="width: 400px; margin-right: 20px;">
+            <div>
+                <h2>Viventis Alis</h2>
+                <p><strong>Descripción: </strong>Viventis Alis es la fragancia de la vitalidad pura. Fresca, afrutada y ligera, se asienta sobre una base amaderada que le otorga profundidad y sofisticación, ideal para aquellos que buscan una fragancia llena de energía y elegancia. Viventis Alis es ligero y fresco, lo que lo hace perfecto para los días más cálidos. Sus notas frutales y florales aportan frescura y vivacidad, mientras que el sándalo y el cedro le dan una base suave y amaderada.</p>
+                <p><strong>Notas:</strong></p>
+                <ul>
+                    <li>Notas de salida: Manzana verde, Pomelo</li>
+                    <li>Notas de corazón: Fresia, Geranio, Hierba fresca</li>
+                    <li>Notas de fondo: Musk, Sándalo, Cedro</li>
+                </ul>
+                <label for="size">Selecciona el tamaño:</label>
+                <select id="size">
+                    <option value="10ml" data-price="25">10ml - 25€</option>
+                    <option value="30ml" data-price="50">30ml - 50€</option>
+                    <option value="60ml" data-price="90">60ml - 90€</option>
+                </select>
+                <p><strong>Precio:</strong> <span id="price">25€ - 90€</span></p>
+                <button onclick="addToCart('Viventis Alis', document.getElementById('size').value, document.getElementById('size').selectedOptions[0].getAttribute('data-price'))">Comprar</button>
+            </div>
+        </div>
+    </section>
+    <section id="product-reviews">
+        <h3>Comentarios y Reseñas</h3>
+        <div id="reviews-container">
+            <div class="review">
+                <div class="review-header">
+                    <p><strong>Rodrigo Rodríguez</strong></p>
+                    <p class="rating">⭐⭐⭐⭐⭐</p>
+                </div>
+                <p>"Huele como ir al campo por la mañana."</p>
+            </div>
+            <div class="review">
+                <div class="review-header">
+                    <p><strong>Bonifacio Federico</strong></p>
+                    <p class="rating">⭐⭐⭐⭐⭐</p>
+                </div>
+                <p>"Me gusta el olor. Es algo que no se huele mucho en las ciudades y se siente como aire fresco."</p>
+            </div>
+        </div>
+        
+        <h4>Deja tu comentario:</h4>
+        <form id="review-form">
+            <label for="name">Tu nombre:</label>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="rating">Calificación:</label>
+            <select id="rating" name="rating" required>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐☆</option>
+                <option value="3">⭐⭐⭐☆☆</option>
+                <option value="2">⭐⭐☆☆☆</option>
+                <option value="1">⭐☆☆☆☆</option>
+            </select><br><br>
+    
+            <label for="review-text">Tu comentario:</label><br>
+            <textarea id="review-text" name="review-text" rows="4" required></textarea><br><br>
+    
+            <button type="submit">Enviar Comentario</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Clayden Parfums. Todos los derechos reservados.</p>
+        <p>Para contactar con nosotros, envia un correo a <strong>info@clayden.com</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noxium Atra - Clayden Parfums</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Clayden Parfums</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="terms.html">Términos y condiciones</a></li>
+                <li><a href="products.html">Catálogo</a></li>
+                <li><a href="limited_edition.html">Ediciones Limitadas</a></li>
+                <li><a href="cart.html">Carrito</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="product-details">
+        <div style="display: flex; align-items: flex-start;">
+            <img src="images/noxium_atra.png" alt="Noxium Atra" style="width: 400px; margin-right: 20px;">
+            <div>
+                <h2>Noxium Antra</h2>
+                <p><strong>Descripción: </strong>Noxium Atra es una fragancia misteriosa y seductora, como la quietud de la noche. Las especias se mezclan con la suavidad de la vainilla y el toque oscuro de oud y tabaco, creando una fragancia envolvente y única. Noxium Atra tiene una intensidad profunda, ideal para las estaciones frías. El oud y el tabaco aportan una carga de misterio y sofisticación, mientras que las notas de vainilla y lavanda suavizan la mezcla para hacerla envolvente y sensual.</p>
+                <p><strong>Notas:</strong></p>
+                <ul>
+                    <li>Notas de salida: Bergamota, Pétalos de rosa</li>
+                    <li>Notas de corazón: Vainilla bourbon, Lavanda, Clavo</li>
+                    <li>Notas de fondo: Madera de oud, Ámbar, Alquimia de tabaco</li>
+                </ul>
+                <label for="size">Selecciona el tamaño:</label>
+                <select id="size">
+                    <option value="10ml" data-price="30">10ml - 30€</option>
+                    <option value="30ml" data-price="60">30ml - 60€</option>
+                    <option value="60ml" data-price="100">60ml - 100€</option>
+                </select>
+                <p><strong>Precio:</strong> <span id="price">30€ - 100€</span></p>
+                <button onclick="addToCart('Noxium Atra', document.getElementById('size').value, document.getElementById('size').selectedOptions[0].getAttribute('data-price'))">Comprar</button>
+            </div>
+        </div>
+    </section>
+    <section id="product-reviews">
+        <h3>Comentarios y Reseñas</h3>
+        <div id="reviews-container">
+            <div class="review">
+                <div class="review-header">
+                    <p><strong>Iván Martín</strong></p>
+                    <p class="rating">⭐⭐⭐⭐⭐</p>
+                </div>
+                <p>"Tengo 75 novias gracias a ducharme con este perfume cada día."</p>
+            </div>
+            <div class="review">
+                <div class="review-header">
+                    <p><strong>Leo Paredes</strong></p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <p>"El olor es espectacular y da muchos cumplidos, pero no es para todas las ocasiones."</p>
+            </div>
+        </div>
+        
+        <h4>Deja tu comentario:</h4>
+        <form id="review-form">
+            <label for="name">Tu nombre:</label>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="rating">Calificación:</label>
+            <select id="rating" name="rating" required>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐☆</option>
+                <option value="3">⭐⭐⭐☆☆</option>
+                <option value="2">⭐⭐☆☆☆</option>
+                <option value="1">⭐☆☆☆☆</option>
+            </select><br><br>
+    
+            <label for="review-text">Tu comentario:</label><br>
+            <textarea id="review-text" name="review-text" rows="4" required></textarea><br><br>
+    
+            <button type="submit">Enviar Comentario</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Clayden Parfums. Todos los derechos reservados.</p>
+        <p>Para contactar con nosotros, envia un correo a <strong>info@clayden.com</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

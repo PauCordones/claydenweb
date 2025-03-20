@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inicio de Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Frutiger', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; 
+    color: #333; 
+    background-image: url(images/caballo.jpg); 
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+    display: flex;  /* Habilitar Flexbox */
+    justify-content: center;  /* Centrar horizontalmente */
+    align-items: center;  /* Centrar verticalmente */
+    min-height: 100vh;  /* Asegura que el body tenga la altura total de la ventana */
+    margin: 0;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.6); 
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #d1b88f; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*CSS del Framework*/
+.login-container {
+    background: linear-gradient(135deg, #b38e53, #3d301c);
+    border-radius: 10px;
+    width: 350px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+}
+
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #f1f1f1; 
+}
+
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+
+.login-container input:focus {
+    border-color: #4e60ff;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.4);
+}
+
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #b38e53; /* Dorado suave */
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.login-container button:hover {
+    background-color: #b5975b; /* Dorado más oscuro */
+    transform: translateY(-2px);
+}
+
+
+.login-container button:active {
+    transform: translateY(2px);
+}
+
+
+.login-container .forgot-password {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+
+.login-container .forgot-password:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container h2 {
+        font-size: 1.5em;
+    }
+
+    .login-container input, .login-container button {
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clayden Parfums</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="terms.html">Términos y condiciones</a></li>
+                <li><a href="products.html">Catálogo</a></li>
+                <li><a href="limited_edition.html">Ediciones Limitadas</a></li>
+                <li><a href="cart.html">Carrito</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!--Aquí empieza el Framework, es de UIVerse y está hecho para crear el container de datos con degradado-->
+<div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form onsubmit="return login();">
+        <input type="text" id="username" placeholder="Usuario" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button type="submit">Iniciar sesión</button>
+    </form>
+    <a href="error.html" class="forgot-password">¿Olvidaste tu contraseña?</a>
+</div>
+
+<script>
+    function login() {
+        window.location.href = "index.html";
+        return false;
+    }
+</script>
+
+</body>
+</html>

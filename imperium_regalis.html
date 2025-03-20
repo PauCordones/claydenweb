@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperium Regalis - Clayden Parfums</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Clayden Parfums</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="terms.html">Términos y condiciones</a></li>
+                <li><a href="products.html">Catálogo</a></li>
+                <li><a href="limited_edition.html">Ediciones Limitadas</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="cart.html">Carrito</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="product-details">
+        <div style="display: flex; align-items: flex-start;">
+            <img src="images/imperium_regalis.png" alt="Imperium Regalis" style="width: 400px; margin-right: 20px;">
+            <div>
+                <h2>Imperium Regalis</h2>
+                <p><strong>Descripción: </strong>Imperium Regalis es la fragancia de la realeza. Con una mezcla de frutas frescas, flores delicadas y un fondo de madera de cedro y cuero, esta fragancia está pensada para el hombre sofisticado que busca la grandeza. Aunque tiene un toque amaderado y floral, su equilibrio lo hace adecuado para cualquier estación del año. Los toques de frambuesa le dan frescura, mientras que el iris y el cuero le dan un aire elegante.</p>
+                <p><strong>Notas:</strong></p>
+                <ul>
+                    <li>Notas de salida: Bergamota, Frambuesa</li>
+                    <li>Notas de corazón: Iris, Sazafrás, Pétalos de loto</li>
+                    <li>Notas de fondo: Madera de cedro, Cuero, Almizcle</li>
+                </ul>
+                <label for="size">Selecciona el tamaño:</label>
+                <select id="size">
+                    <option value="10ml" data-price="25">10ml - 25€</option>
+                    <option value="30ml" data-price="50">30ml - 50€</option>
+                    <option value="60ml" data-price="90">60ml - 90€</option>
+                </select>
+                <p><strong>Precio:</strong> <span id="price">30€ - 100€</span></p>
+                <button onclick="addToCart('Imperium Regalis', document.getElementById('size').value, document.getElementById('size').selectedOptions[0].getAttribute('data-price'))">Comprar</button>
+            </div>
+        </div>
+    </section>
+    <section id="product-reviews">
+        <h3>Comentarios y Reseñas</h3>
+        <div id="reviews-container">
+            <div class="review">
+                <div class="review-header">
+                    <p><strong>Dimitri Sukranov</strong></p>
+                    <p class="rating">⭐⭐⭐⭐⭐</p>
+                </div>
+                <p>"Huele más caro de lo que es."</p>
+            </div>
+            <div class="review">
+                <div class="review-header">
+                    <p><strong>María Martínez</strong></p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <p>"No es de mi agrado, pero a mi hijo le encanta."</p>
+            </div>
+        </div>
+        
+        <h4>Deja tu comentario:</h4>
+        <form id="review-form">
+            <label for="name">Tu nombre:</label>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="rating">Calificación:</label>
+            <select id="rating" name="rating" required>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐☆</option>
+                <option value="3">⭐⭐⭐☆☆</option>
+                <option value="2">⭐⭐☆☆☆</option>
+                <option value="1">⭐☆☆☆☆</option>
+            </select><br><br>
+    
+            <label for="review-text">Tu comentario:</label><br>
+            <textarea id="review-text" name="review-text" rows="4" required></textarea><br><br>
+    
+            <button type="submit">Enviar Comentario</button>
+        </form>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2025 Clayden Parfums. Todos los derechos reservados.</p>
+        <p>Para contactar con nosotros, envia un correo a <strong>info@clayden.com</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
